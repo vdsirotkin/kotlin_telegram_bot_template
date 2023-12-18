@@ -1,7 +1,7 @@
 package com.vdsirotkin.telegrambot.handler.common
 
 import com.pengrad.telegrambot.model.Update
-import com.vdsirotkin.telegrambot.bot.RenameMeBot
+import com.vdsirotkin.telegrambot.bot.Bot
 import com.vdsirotkin.telegrambot.handler.BaseHandler
 import com.vdsirotkin.telegrambot.localization.MessageSourceProvider
 import com.vdsirotkin.telegrambot.user.Language
@@ -16,7 +16,7 @@ class StartHandler(
     private val usersRepository: UsersRepository,
 ) : BaseHandler {
 
-    override fun handle(bot: RenameMeBot, update: Update) {
+    override fun handle(bot: Bot, update: Update) {
         val chatId = update.message().chat().id()
 
         val telegramLanguageCode = update.message().from().languageCode()

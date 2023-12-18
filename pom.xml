@@ -14,7 +14,7 @@
     <name>kotlin-telegram-bot-template</name>
     <properties>
         <java.version>21</java.version>
-        <kotlin.version>1.9.20-Beta2</kotlin.version>
+        <kotlin.version>1.9.21</kotlin.version>
         <java-telegram-bot-api.version>6.9.1</java-telegram-bot-api.version>
         <resilience4j.version>2.0.2</resilience4j.version>
     </properties>
@@ -22,6 +22,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -99,6 +103,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>service</finalName>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>

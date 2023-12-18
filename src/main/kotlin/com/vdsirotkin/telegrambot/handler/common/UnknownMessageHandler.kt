@@ -3,7 +3,7 @@ package com.vdsirotkin.telegrambot.handler.common
 import com.pengrad.telegrambot.model.Update
 import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove
 import com.pengrad.telegrambot.request.AnswerCallbackQuery
-import com.vdsirotkin.telegrambot.bot.RenameMeBot
+import com.vdsirotkin.telegrambot.bot.Bot
 import com.vdsirotkin.telegrambot.handler.LocalizedHandler
 import com.vdsirotkin.telegrambot.localization.MessageSourceProvider
 import com.vdsirotkin.telegrambot.localization.MessageSourceWrapper
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service
 @Service
 class UnknownMessageHandler(override val messageSourceProvider: MessageSourceProvider) : LocalizedHandler {
 
-    override fun MessageSourceWrapper.handleInternal(bot: RenameMeBot, update: Update) {
+    override fun MessageSourceWrapper.handleInternal(bot: Bot, update: Update) {
         when {
             update.message() != null -> {
                 logger.info("Received some spam: ${update.message().text()}")

@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component
 import kotlin.reflect.KClass
 
 @Component
-class RenameMeBot(
+class Bot(
     private val props: BotConfigProps,
     private val handlerFactory: HandlerFactory,
     private val messageSourceProvider: MessageSourceProvider,

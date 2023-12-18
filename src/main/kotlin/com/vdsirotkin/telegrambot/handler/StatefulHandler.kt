@@ -1,6 +1,6 @@
 package com.vdsirotkin.telegrambot.handler
 
-import com.vdsirotkin.telegrambot.bot.RenameMeBot
+import com.vdsirotkin.telegrambot.bot.Bot
 import mu.KotlinLogging
 import org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE
 import org.springframework.context.annotation.Scope
@@ -10,7 +10,7 @@ interface StatefulHandler<DATA> : BaseHandler {
 
     var state: HandlerState<DATA>
 
-    fun cancel(bot: RenameMeBot, chatId: Long) {
+    fun cancel(bot: Bot, chatId: Long) {
         KotlinLogging.logger(StatefulHandler::class.java.name).info("Nothing to cancel")
     }
 }
